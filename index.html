@@ -63,10 +63,11 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 80px 5% 70px;
-      display: grid;
-      grid-template-columns: 1fr 520px;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
       align-items: center;
+      text-align: center;
     }
     .hero-text h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.03em; color: var(--text-main); margin-bottom: 0.4em; }
     .hero-text h1 .accent { color: var(--accent); }
@@ -90,12 +91,15 @@
     }
     .hero-cta:hover { background: var(--off-white); box-shadow: var(--shadow-lg); }
     .hero-cta svg { width: 28px; height: 28px; }
-
-    .hero-image-wrap { position: relative; }
+.hero-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  order: -1;
    .hero-image-wrap img {
        width: 100%;
   border-radius: var(--radius);
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: var(--shadow-lg);
   display: block;
   aspect-ratio: 16 / 9;
